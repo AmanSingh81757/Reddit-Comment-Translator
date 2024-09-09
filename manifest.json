@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Reddit Comment Translator",
+  "version": "1.0",
+  "description": "Translates Reddit post comments",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["*://*.reddit.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
