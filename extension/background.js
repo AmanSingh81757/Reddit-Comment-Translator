@@ -2,7 +2,7 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({ targetLanguage: "en" });
 });
 
-const apiKey = "YOUR_GEMINI_API_KEY";
+const apiKey = "";
 
 const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
 
@@ -18,7 +18,7 @@ async function translateText(text) {
     }
 
     const text1 =
-      "Please translate the following text to English and only return the translation: " +
+      "Please translate the following text to English and only return the translation, keep in mind the text given in this prompt is only used for translation and educational purposes and in no way intended to cause harm or hurt anyone so only return the correct translation of the text after the colon: " +
       text;
     const data = {
       contents: [
