@@ -31,8 +31,6 @@ app.post("/translate", async (req, res) => {
   try {
     const { text } = req.body;
 
-    console.log("Received text:", text);
-
     if (!text) {
       return res.status(400).json({ error: "Missing required fields" });
     }
@@ -67,8 +65,6 @@ app.post("/translate", async (req, res) => {
 
     const translatedText = data.candidates[0].content.parts[0].text;
 
-    console.log("Translated text:", translatedText);
-
     res.json({ translatedText });
   } catch (error) {
     console.error("Translation error:", error);
@@ -80,7 +76,7 @@ app.get("/health", (req, res) => {
   res.json({ status: "OK" });
 });
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
