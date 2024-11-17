@@ -15,6 +15,17 @@
     }
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/reddit_translator_logo.png",
+      "48": "images/reddit_translator_logo.png",
+      "128": "images/reddit_translator_logo.png"
+    },
+    "default_title": "Translate Reddit Comment"
+  },
+  "icons": {
+    "16": "images/reddit_translator_logo.png",
+    "48": "images/reddit_translator_logo.png",
+    "128": "images/reddit_translator_logo.png"
   }
 }
